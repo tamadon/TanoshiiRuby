@@ -1,2 +1,2 @@
-TanoshiiRuby
+たのしいRuby 写経用
 ============
