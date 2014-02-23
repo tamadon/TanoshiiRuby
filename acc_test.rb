@@ -13,4 +13,3 @@ end
 acc = AccTest.new
 acc.pub
 acc.priv  #privateメソッドなのでエラーになる
-
