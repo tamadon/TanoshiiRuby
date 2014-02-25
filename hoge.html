@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)https://www.ruby-lang.org/ja/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>オブジェクト指向スクリプト言語 Ruby</title>
+    
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+
+    <link rel="stylesheet" type="text/css" href="./hoge_files/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./hoge_files/main.css">
+    <link rel="stylesheet" type="text/css" href="./hoge_files/pygments.css">
+    <link rel="stylesheet" type="text/css" href="./hoge_files/mobile.css">
+    <link rel="stylesheet" type="text/css" href="./hoge_files/print.css">
+    <link href="./hoge_files/css" rel="stylesheet" type="text/css">
+    <link rel="canonical" href="./hoge_files/hoge.html">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.ruby-lang.org/favicon.ico">
+    
+  
+
+    <link href="https://www.ruby-lang.org/ja/feeds/news.rss" rel="alternate" title="最近のニュース (RSS)" type="application/rss+xml">
+
+
+    <script type="text/javascript" async="" src="./hoge_files/ga.js"></script><script type="text/javascript" src="./hoge_files/jquery.min.js"></script><style type="text/css"></style>
+    <script type="text/javascript" src="./hoge_files/page.js"></script>
+    
+    
+    <script type="text/javascript" src="./hoge_files/examples.js"></script>
+    
+    
+  <style id="clearly_highlighting_css" type="text/css">/* selection */ html.clearly_highlighting_enabled ::-moz-selection { background: rgba(246, 238, 150, 0.99); } html.clearly_highlighting_enabled ::selection { background: rgba(246, 238, 150, 0.99); } /* cursor */ html.clearly_highlighting_enabled {    /* cursor and hot-spot position -- requires a default cursor, after the URL one */    cursor: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--cursor.png") 14 16, text; } /* highlight tag */ em.clearly_highlight_element {    font-style: inherit !important; font-weight: inherit !important;    background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--yellow.png");    background-repeat: repeat-x; background-position: top left; background-size: 100% 100%; } /* the delete-buttons are positioned relative to this */ em.clearly_highlight_element.clearly_highlight_first { position: relative; } /* delete buttons */ em.clearly_highlight_element a.clearly_highlight_delete_element {    display: none; cursor: pointer;    padding: 0; margin: 0; line-height: 0;    position: absolute; width: 34px; height: 34px; left: -17px; top: -17px;    background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--delete-sprite.png"); background-repeat: no-repeat; background-position: 0px 0px; } em.clearly_highlight_element a.clearly_highlight_delete_element:hover { background-position: -34px 0px; } /* retina */ @media (min--moz-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {    em.clearly_highlight_element { background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--yellow@2x.png"); }    em.clearly_highlight_element a.clearly_highlight_delete_element { background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--delete-sprite@2x.png"); background-size: 68px 34px; } } </style><style>[touch-action="none"]{ -ms-touch-action: none; touch-action: none; }[touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x; }[touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y; }[touch-action="scroll"],[touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; }</style></head>
+
+  
+
+  <body id="home-page-layout">
+    <div id="header">
+      <div id="header_content" class="container">
+        <a href="./hoge_files/hoge.html">
+          <h1>Ruby</h1>
+          <h2>A Programmer's Best Friend</h2>
+        </a>
+
+        <div class="site-links">
+          <a href="./hoge_files/hoge.html" class="home selected">Home</a>
+          
+  
+
+
+  <a href="https://www.ruby-lang.org/ja/downloads/">ダウンロード</a>
+
+  <a href="https://www.ruby-lang.org/ja/documentation/">ドキュメント</a>
+
+  <a href="https://www.ruby-lang.org/ja/libraries/">ライブラリ</a>
+
+  <a href="https://www.ruby-lang.org/ja/community/">コミュニティ</a>
+
+  <a href="https://www.ruby-lang.org/ja/dev/">コア開発</a>
+
+  <a href="https://www.ruby-lang.org/ja/news/">ニュース</a>
+
+  <a href="https://www.ruby-lang.org/ja/security/">セキュリティ</a>
+
+  <a href="https://www.ruby-lang.org/ja/about/">Rubyとは</a>
+
+
+          <a href="https://www.ruby-lang.org/ja/#" class="menu selected">Menu</a>
+        </div>
+
+        <div id="search-box">
+          
+  
+  
+
+<form id="search-form" action="http://www.google.com/cse">
+  <table class="fieldset">
+    <tbody><tr>
+      <td>
+        <input class="field" type="text" name="q" size="31" style="background: white url(//www.google.com/coop/intl/ja/images/google_custom_search_watermark.gif) left no-repeat" onfocus="this.style.background=&#39;white&#39;" onblur="if (/^\s*$/.test(this.value)) this.style.background=&#39;white url(//www.google.com/coop/intl/ja/images/google_custom_search_watermark.gif) left no-repeat&#39;">
+      </td>
+      <td>
+        <input type="hidden" name="cx" value="008288045305770251182:fvruzsaknew">
+        <input type="hidden" name="ie" value="UTF-8">
+        <input class="button" type="submit" name="sa" value="検索">
+      </td>
+    </tr>
+  </tbody></table>
+</form>
+
+        </div>
+      </div>
+    </div>
+
+    <div id="page">
+      
+<div id="intro-container">
+  <div class="container">
+    <div id="intro-wrapper">
+  <div id="intro">
+    <h1>Rubyとは...</h1>
+
+    <p>
+    オープンソースの動的なプログラミング言語で、 シンプルさと高い生産性を備えています。
+    エレガントな文法を持ち、自然に読み書きができます。
+    </p>
+
+    <a href="https://www.ruby-lang.org/ja/downloads/" class="download-link">ダウンロード</a>
+    または
+    <a href="https://www.ruby-lang.org/ja/about/">もっと読む...</a>
+  </div>
+  <div id="code">
+<div class="highlight"><pre><code class="ruby"><span class="c1"># Output "I love Ruby"</span>
+<span class="n">say</span> <span class="o">=</span> <span class="s2">"I love Ruby"</span>
+<span class="nb">puts</span> <span class="n">say</span>
+
+<span class="c1"># Output "I *LOVE* RUBY"</span>
+<span class="n">say</span><span class="o">[</span><span class="s1">'love'</span><span class="o">]</span> <span class="o">=</span> <span class="s2">"*love*"</span>
+<span class="nb">puts</span> <span class="n">say</span><span class="o">.</span><span class="n">upcase</span>
+
+<span class="c1"># Output "I *love* Ruby"</span>
+<span class="c1"># five times</span>
+<span class="mi">5</span><span class="o">.</span><span class="n">times</span> <span class="p">{</span> <span class="nb">puts</span> <span class="n">say</span> <span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+
+  </div>
+</div>
+
+
+
+      <div id="main-wrapper" class="container">
+        <div id="main">
+          <div id="content-wrapper">
+  
+<!-- //-->
+
+
+
+
+  <div id="content">
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+<div class="post">
+  <h3><a href="https://www.ruby-lang.org/ja/news/2014/02/24/ruby-1-9-3-p545-is-released/">Ruby 1.9.3-p545 リリース</a></h3>
+
+  <p>今日は Ruby の 21 回目の誕生日です。
+これを記念して、Ruby 1.9.3-p545 がリリースされました。</p>
+
+
+
+  <p class="post-link"><a href="https://www.ruby-lang.org/ja/news/2014/02/24/ruby-1-9-3-p545-is-released/">もっと読む...</a></p>
+
+  <p class="post-info">Posted by usa on 24 Feb 2014</p>
+</div>
+
+<div class="post">
+  <h3><a href="https://www.ruby-lang.org/ja/news/2014/02/12/the-2014-ruby-hero-awards/">2014年 Ruby Hero Award 候補者募集</a></h3>
+
+  <p>去年1年間、 Ruby コミュニティの中であなたを大いに助けてくれた人はいませんか？
+あなたに何かを教えてくれたり、 gem を書いたり、技術的な支援をしてくれた人たちです。
+もし誰かが思い浮かんだら、Ruby Hero Award に<a href="http://rubyheroes.com/">その人を推薦してください</a>。</p>
+
+
+
+  <p class="post-link"><a href="https://www.ruby-lang.org/ja/news/2014/02/12/the-2014-ruby-hero-awards/">もっと読む...</a></p>
+
+  <p class="post-info">Posted by Gregg Pollack on 12 Feb 2014</p>
+</div>
+
+<div class="post">
+  <h3><a href="https://www.ruby-lang.org/ja/news/2014/01/10/ruby-1-9-3-will-end-on-2015/">Ruby 1.9.3 サポートは 2015 年 2 月 23 日に終了します</a></h3>
+
+  <p>Ruby 1.9.3 のメンテナンスプランについて決定されたため、お知らせします。</p>
+
+
+
+  <p class="post-link"><a href="https://www.ruby-lang.org/ja/news/2014/01/10/ruby-1-9-3-will-end-on-2015/">もっと読む...</a></p>
+
+  <p class="post-info">Posted by hsbt on 10 Jan 2014</p>
+</div>
+
+<div class="post">
+  <h3><a href="https://www.ruby-lang.org/ja/news/2013/12/25/ruby-2-1-0-is-released/">Ruby 2.1.0 リリース</a></h3>
+
+  <p>Ruby 2.1.0 をリリースしました。</p>
+
+
+
+  <p class="post-link"><a href="https://www.ruby-lang.org/ja/news/2013/12/25/ruby-2-1-0-is-released/">もっと読む...</a></p>
+
+  <p class="post-info">Posted by nurse on 25 Dec 2013</p>
+</div>
+
+
+<div id="news">
+  <h3>その他のニュース</h3>
+  <ul>
+    
+    <li>
+      <a href="https://www.ruby-lang.org/ja/news/2013/12/21/rubyist-magazine-0045-published/">Rubyist Magazine 0045号 発行</a>
+      <span class="post-info">Posted by hokkai7go on 21 Dec 2013</span>
+    </li>
+    
+    <li>
+      <a href="https://www.ruby-lang.org/ja/news/2013/12/21/semantic-versioning-after-2-1-0/">Ruby 2.1.0 以降のセマンティックバージョニングについて</a>
+      <span class="post-info">Posted by zzak on 21 Dec 2013</span>
+    </li>
+    
+    <li>
+      <a href="https://www.ruby-lang.org/ja/news/2013/12/20/ruby-2-1-0-rc1-is-released/">Ruby 2.1.0-rc1 リリース</a>
+      <span class="post-info">Posted by nurse on 20 Dec 2013</span>
+    </li>
+    
+  </ul>
+
+  <ul>
+    
+    <li>
+      <a href="https://www.ruby-lang.org/ja/news/2013/12/17/maintenance-of-1-8-7-and-1-9-2/">Ruby 1.8.7 と 1.9.2 のセキュリティメンテナンスが延長されます</a>
+      <span class="post-info">Posted by zzak on 17 Dec 2013</span>
+    </li>
+    
+    <li>
+      <a href="https://www.ruby-lang.org/ja/news/2013/12/14/rubyconf-india-2014/">RubyConf India 2014 の発表募集とチケット発売の開始!</a>
+      <span class="post-info">Posted by Manu S Ajith on 14 Dec 2013</span>
+    </li>
+    
+    <li>
+      <a href="https://www.ruby-lang.org/ja/news/2013/12/09/rubyconf-tw-2014-cfp/">RubyConf Taiwan 2014 の発表者募集が始まりました</a>
+      <span class="post-info">Posted by Juanito Fatas on 9 Dec 2013</span>
+    </li>
+    
+  </ul>
+
+  <p class="more">
+    <a href="https://www.ruby-lang.org/ja/news/">もっと読む...</a>
+  </p>
+</div>
+
+  </div>
+</div>
+<hr class="hidden-modern">
+
+<div id="sidebar-wrapper">
+  <div id="sidebar">
+    
+  
+
+
+
+
+
+
+
+<div class="navigation">
+  <h3><strong>探求しよう!</strong></h3>
+  <ul class="menu">
+    
+    <li><a href="https://www.ruby-lang.org/ja/documentation/">ドキュメント</a></li>
+    
+
+    
+
+    
+    <li><a href="https://www.ruby-lang.org/ja/libraries/">ライブラリ</a></li>
+    
+
+    
+  </ul>
+</div>
+
+
+
+<div class="navigation">
+  <h3><strong>コミュニティに参加しよう</strong></h3>
+  <ul>
+    
+    <li><a href="https://www.ruby-lang.org/ja/community/mailing-lists/">メーリングリスト</a>: 世界中のプログラマとRubyについて話しましょう。
+</li>
+    
+
+    
+    <li><a href="http://ruby-no-kai.org/">日本Rubyの会</a>: Rubyの利用者/開発者の支援を目的としたグループです。
+</li>
+    
+
+    
+    <li><a href="http://www.rubyist.net/~kazu/samidare/">更新順リンク</a>: Ruby関連のサイトのリンクを更新順に並べたものです。
+</li>
+    
+
+    
+
+    
+  </ul>
+</div>
+
+
+
+
+
+  
+
+
+    <h3>Syndicate</h3>
+    <p><a href="https://www.ruby-lang.org/ja/feeds/news.rss">最近のニュース (RSS)</a></p>
+
+
+  </div>
+</div>
+<hr class="hidden-modern">
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div id="footer">
+        <div class="site-links">
+          
+  
+
+
+  <a href="https://www.ruby-lang.org/ja/downloads/">ダウンロード</a>
+
+  <a href="https://www.ruby-lang.org/ja/documentation/">ドキュメント</a>
+
+  <a href="https://www.ruby-lang.org/ja/libraries/">ライブラリ</a>
+
+  <a href="https://www.ruby-lang.org/ja/community/">コミュニティ</a>
+
+  <a href="https://www.ruby-lang.org/ja/dev/">コア開発</a>
+
+  <a href="https://www.ruby-lang.org/ja/news/">ニュース</a>
+
+  <a href="https://www.ruby-lang.org/ja/security/">セキュリティ</a>
+
+  <a href="https://www.ruby-lang.org/ja/about/">Rubyとは</a>
+
+
+        </div>
+
+        <p>
+
+  This site in other languages:
+
+<a href="https://www.ruby-lang.org/bg/">Български</a>,
+<a href="https://www.ruby-lang.org/de/">Deutsch</a>,
+<a href="https://www.ruby-lang.org/en/">English</a>,
+<a href="https://www.ruby-lang.org/es/">Español</a>,
+<a href="https://www.ruby-lang.org/fr/">Français</a>,
+<a href="https://www.ruby-lang.org/id/">Bahasa Indonesia</a>,
+<a href="https://www.ruby-lang.org/it/">Italiano</a>,
+<a href="./hoge_files/hoge.html">日本語</a>,
+<a href="https://www.ruby-lang.org/ko/">한국어</a>,
+<a href="https://www.ruby-lang.org/pl/">polski</a>,
+<a href="https://www.ruby-lang.org/pt/">Português</a>,
+<a href="https://www.ruby-lang.org/ru/">Русский</a>,
+<a href="https://www.ruby-lang.org/tr/">Türkçe</a>,
+<a href="https://www.ruby-lang.org/vi/">Tiếng Việt</a>,
+<a href="https://www.ruby-lang.org/zh_cn/">简体中文</a>,
+<a href="https://www.ruby-lang.org/zh_tw/">繁體中文</a>.
+</p>
+
+        
+  <p><a href="https://www.ruby-lang.org/en/about/logo/">The Ruby Logo</a> is Copyright © 2006, Yukihiro Matsumoto; licensed under the terms of the <a href="http://creativecommons.org/licenses/by-sa/2.5/">CC BY-SA 2.5</a>.
+</p>
+
+
+  <p>このサイトはRubyと<a href="http://www.jekyllrb.com/">Jekyll</a>によって構築されています。
+また、コンテンツはRubyコミュニティによって管理されています。
+このサイトに関する質問やコメントは<a href="https://github.com/ruby/www.ruby-lang.org/">GitHub</a>へのissueまたはpull request、もしくは<a href="mailto:webmaster@ruby-lang.org">webmaster</a> までお願いします。
+</p>
+
+
+      </div>
+    </div>
+
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-620926-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+  
+
+<div id="shadowMeasureIt"></div><div id="divCoordMeasureIt"></div><div id="divRectangleMeasureIt"><div id="divRectangleBGMeasureIt"></div></div></body></html>
